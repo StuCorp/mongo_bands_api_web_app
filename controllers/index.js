@@ -12,10 +12,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/about', function(req, res){
-  // res.json({data: "Fuck this!"});
-    query.all(function(results){
-      res.json(results);
-    })
+  res.json("Actually, api/bands works now!");
   });
 
 module.exports = router;

@@ -19,14 +19,17 @@ var query = new bandsQuery();
 //film index
 
 bandsRouter.get('/', function(req, res){
-  res.json({data: "Fuck this!"});
+  query.all(function(results){
+    res.json(results);
+  })
+  // res.json({data: "Fuck this!"});
 })
 
-// bandsRouter.get('/', function(req, res) {
-//   query.all(function(results){
-//     res.json(results);
-//   })
-// });
+bandsRouter.get('/', function(req, res) {
+  query.all(function(results){
+    res.json(results);
+  })
+});
 
 // //film update
 // filmRouter.put('/:id', function(req, res) {
